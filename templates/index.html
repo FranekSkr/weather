@@ -1,0 +1,42 @@
+{% load static  %}
+
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pogoda</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="header">
+        <h1 class="main_h">Pogoda <i>☀️</i></h1>
+    </div>
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="text" name="city" id="city" autocomplete="off">
+    <button type="submit" id="submit"><img src="{% static 'images/search.png' %}" alt=""></button>
+</form>
+<div>
+    {% if data.country_code %}
+    <div class="block">
+        <h1>{{ city }}, {{ data.country_code }}</h1>
+        <div class="weather_info">
+            <h3>Pogoda:</h3>
+            <h5>Temperatura: {{ data.temp }}°C</h5>
+            <h5>Ciśnienie: {{ data.pressure }} hPa</h5>
+            <h5>Wilgotność: {{ data.humidity }}%</h5>
+            <h5>{{ data.weather_desc }}</h5>
+        </div>
+    <div class="weather_icon">
+        <img src="http://openweathermap.org/img/wn/{{ data.weather_icon }}@2x.png" alt="">
+    </div>
+    </div>
+    {% elif city == 'err'%}
+    <h1>Nie znaleziono miasta</h1>
+    {% endif %}
+</div>
+</body>
+</html>
