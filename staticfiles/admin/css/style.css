@@ -1,0 +1,157 @@
+*{margin: 0;padding: 0;font-family: arial;}
+body{
+    height: 100vh;
+    background: rgb(153,255,255);
+    background: -moz-linear-gradient(180deg, rgba(153,255,255,1) 0%, rgba(69,69,69,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(153,255,255,1) 0%, rgba(69,69,69,1) 100%);
+    background: linear-gradient(180deg, rgba(153,255,255,1) 0%, rgba(69,69,69,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#99ffff",endColorstr="#454545",GradientType=1);
+    background-repeat: no-repeat;
+    background-size:100%;
+}
+
+.header{
+    width: 100%;
+    height: 100px;
+    line-height:100px;
+}
+.main_h{
+    text-align: center;
+}
+.main_h i{
+    font-style: normal;
+    text-decoration: none;
+}
+form{
+    margin:10px auto;
+    width: 90%;
+    display: flex;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius:10px;
+}
+#city{
+    background: none;
+    width: 89%;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+#submit{
+    width: 8%;
+    height: 30px;
+    background: none;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#submit img{
+    margin-top: 2px;
+    margin-left: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.block{
+    text-align: center;
+    margin:25px auto;
+    width: 100%;
+}
+.block h1{
+    font-size: 40px;
+}
+.weather_info{
+    margin-top: 10px;
+    width: 60%;
+    display: inline-block;
+}
+.weather_icon{
+    display: inline-flex;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+
+}
+.weather_icon img{
+    width: 100%;
+    height: 100%;
+
+}
+.weather_info h3{
+    font-size:32px;
+    font-weight:500;
+}
+.weather_info h5{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+}
+@media screen and (min-width: 600px){
+    #city {
+        height: 40px;
+    }
+    #submit{
+        height: 40px;
+    }
+
+    .main_h{
+        text-align: center;
+        font-size: 55px;
+    }
+    .block h1{
+        font-size: 52px;
+    }
+    .weather_info h3{
+        font-size:47px;
+        font-weight:500;
+    }
+    .weather_info h5{
+        font-size: 35px;
+        font-style: normal;
+        font-weight: normal;
+    }
+
+}
+@media screen and (min-width: 1200px){
+    form{
+        width:60%;
+    }
+    #city {
+        height: 80px;
+        padding-left: 20px;
+        font-size: 32px;
+    }
+    #submit{
+        height: 80px;
+    }
+
+    .main_h{
+        text-align: center;
+        font-size: 90px;
+    }
+    .block h1{
+        font-size: 80px;
+    }
+    .weather_info h3{
+        font-size:70px;
+        font-weight:500;
+    }
+    .weather_info h5{
+        font-size: 60px;
+        font-style: normal;
+        font-weight: normal;
+    }
+    .block{
+        display: flex;
+        flex-direction: column;
+    }
+    .weather_icon{
+        position: absolute;
+        top: 260px;
+        right: 1000px;
+        width: 10%;
+        height: 200px;
+    }
+}
