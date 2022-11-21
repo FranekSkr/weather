@@ -38,3 +38,4 @@ tqdm==4.64.0
 translators==5.5.0
 tzdata==2021.5
 urllib3==1.26.9
+whitenoise==6.2.0
